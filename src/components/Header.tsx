@@ -1,11 +1,9 @@
+import logo from "../assets/logo.svg";
+
 const Header = () => {
 	return (
 		<header className="flex fixed w-[80vw] left-1/2 -translate-x-1/2 justify-between items-center">
-			<img
-				className="h-[90px] w-[90px]"
-				src="src/assets/logo.svg"
-				alt="Logo do Pumpkabank"
-			/>
+			<img className="h-[90px] w-[90px]" src={logo} alt="Logo do Pumpkabank" />
 
 			<nav className="bg-white rounded-b-[50px] h-24 flex px-16 gap-24 items-center font-semibold text-purple">
 				<ul className="flex gap-4">
