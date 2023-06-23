@@ -1,4 +1,3 @@
-import Divider02 from "../assets/dividers/Divider02.svg";
 import PhoneScreen from "../assets/PhoneScreen.png";
 
 import UpperPhoneDetails from "../assets/details/UpperPhoneDetails.svg";
@@ -17,7 +16,11 @@ const SecondSection = () => {
 				</div>
 
 				<div className="flex flex-col text-white items-center gap-10 w-[40vw]">
-					<img src={UpperPhoneDetails} className="-translate-x-48" alt="" />
+					<img
+						src={UpperPhoneDetails}
+						className="-translate-x-48"
+						alt="Detalhes"
+					/>
 
 					<div className="flex flex-col gap-12">
 						<h1 className="text-[60px] max-w-[5w]">
@@ -47,12 +50,10 @@ const SecondSection = () => {
 					<img
 						src={BottomPhoneDetails}
 						className="translate-x-20"
-						alt="Divisor da seção"
+						alt="Detalhes"
 					/>
 				</div>
 			</div>
-
-			<img src={Divider02} alt="Divisão da seção" />
 		</section>
 	);
 };
