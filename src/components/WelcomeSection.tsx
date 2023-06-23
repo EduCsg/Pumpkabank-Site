@@ -60,7 +60,7 @@ const WelcomeSection = () => {
 				</div>
 			</div>
 
-			<img src={divider01} alt="" />
+			<img src={divider01} alt="Divisão da seção" />
 		</section>
 	);
 };

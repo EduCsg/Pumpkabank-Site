@@ -27,7 +27,7 @@ const Header = () => {
 		<>
 			<header
 				ref={headerRef}
-				className="flex fixed w-[80vw] left-1/2 -translate-x-1/2 justify-between items-center"
+				className="flex fixed w-[80vw] left-1/2 -translate-x-1/2 justify-between items-center z-50"
 			>
 				<img
 					className="h-[90px] w-[90px]"
