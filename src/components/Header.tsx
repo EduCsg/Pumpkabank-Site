@@ -5,13 +5,13 @@ import logo from "../assets/logo.svg";
 const Header = () => {
 	const [height, setHeight] = useState(0);
 	const headerRef: any = useRef(null);
+	const removeHeaderRef: any = useRef(null);
 
 	const removeHeaderHeight = () => {
 		setHeight(headerRef.current?.clientHeight);
-		const removeHeader = document.getElementById("removeHeader");
 
-		if (removeHeader) {
-			removeHeader.style.height = `${height}px`;
+		if (removeHeaderRef) {
+			removeHeaderRef.current.style.height = `${height}px`;
 		}
 	};
 
@@ -70,7 +70,7 @@ const Header = () => {
 				</nav>
 			</header>
 
-			<div id="removeHeader">asd</div>
+			<div ref={removeHeaderRef} id="removeHeader"></div>
 		</>
 	);
 };
