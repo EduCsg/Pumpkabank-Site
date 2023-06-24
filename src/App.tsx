@@ -6,7 +6,7 @@ import InfoSection from "./components/InfoSection";
 import ChameTodosSection from "./components/ChameTodosSection";
 import AppScreen from "./components/DownloadSection";
 import StoresSection from "./components/StoresSection";
-// Venha tambem
+import VenhaTambemSection from "./components/VenhaTambemSection";
 
 // Footer
 
@@ -26,6 +26,8 @@ function App() {
 			<AppScreen />
 
 			<StoresSection />
+
+			<VenhaTambemSection />
 		</>
 	);
 }
