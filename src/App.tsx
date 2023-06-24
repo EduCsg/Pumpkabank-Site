@@ -16,6 +16,12 @@ function App() {
 			<InfoSection />
 
 			<ChameTodosSection />
+
+			{/* App screen */}
+			{/* No dividers */}
+
+			{/* Lojas section */}
+			{/* Dividers 05 & 06 */}
 		</>
 	);
 }

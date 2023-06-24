@@ -1,7 +1,5 @@
 import welcomeImage from "../assets/Welcome.png";
 
-import divider01 from "../assets/dividers/Divider01.svg";
-
 import ColorIcon1 from "../assets/colorsIcons/Color1.svg";
 import ColorIcon2 from "../assets/colorsIcons/Color2.svg";
 import ColorIcon3 from "../assets/colorsIcons/Color3.svg";
@@ -59,8 +57,6 @@ const WelcomeSection = () => {
 					<img src={welcomeImage} className="" alt="" />
 				</div>
 			</div>
-
-			<img src={divider01} alt="Divisão da seção" />
 		</section>
 	);
 };

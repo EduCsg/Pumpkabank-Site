@@ -1,9 +1,5 @@
-import Divider02 from "../assets/dividers/Divider02.svg";
-
 import LeftDetails from "../assets/details/LeftInfoDetails.svg";
 import RightDetails from "../assets/details/RightInfoDetails.svg";
-
-import Divider04 from "../assets/dividers/Divider04.svg";
 
 const InfoSection = () => {
 	const infos = [
@@ -41,8 +37,6 @@ const InfoSection = () => {
 
 	return (
 		<section className="flex flex-col">
-			<img src={Divider02} alt="Divisor da seção" />
-
 			<div className="flex flex-row items-center max-w-[80vw] mx-auto mt-12">
 				<img src={LeftDetails} className="w-[5vw]" alt="Detalhes" />
 
@@ -61,8 +55,6 @@ const InfoSection = () => {
 
 				<img src={RightDetails} className="w-[5vw]" alt="Detalhes" />
 			</div>
-
-			<img src={Divider04} alt="Divisor da seção" />
 		</section>
 	);
 };
