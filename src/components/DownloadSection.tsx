@@ -80,7 +80,7 @@ const AppScreen = () => {
 					</div>
 				</div>
 
-				<img src={Divider05} className="relative z-50" alt="" />
+				<img src={Divider05} className="relative z-30" alt="Divisor da seção" />
 			</div>
 		</section>
 	);
