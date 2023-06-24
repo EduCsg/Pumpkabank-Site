@@ -53,7 +53,7 @@ const InfoSection = () => {
 					))}
 				</div>
 
-				<img src={RightDetails} className="w-[5vw]" alt="Detalhes" />
+				<img src={RightDetails} className="w-[5vw] z-50" alt="Detalhes" />
 			</div>
 		</section>
 	);

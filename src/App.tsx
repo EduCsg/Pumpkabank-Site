@@ -1,8 +1,14 @@
-import ChameTodosSection from "./components/ChameTodosSection";
 import Header from "./components/Header";
-import InfoSection from "./components/InfoSection";
-import SecondSection from "./components/SecondSection";
+
 import WelcomeSection from "./components/WelcomeSection";
+import SecondSection from "./components/SecondSection";
+import InfoSection from "./components/InfoSection";
+import ChameTodosSection from "./components/ChameTodosSection";
+import AppScreen from "./components/DownloadSection";
+// Lojas
+// Venha tambem
+
+// Footer
 
 function App() {
 	return (
@@ -17,8 +23,11 @@ function App() {
 
 			<ChameTodosSection />
 
-			{/* App screen */}
-			{/* No dividers */}
+			<AppScreen />
+
+			{/* <div className="h-[500px] bg-pink"></div> */}
+
+			{/* TO-DO Mover com translate p/ tampar a mao de cima */}
 
 			{/* Lojas section */}
 			{/* Dividers 05 & 06 */}
