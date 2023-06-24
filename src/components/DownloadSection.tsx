@@ -6,10 +6,12 @@ import BottomDownloadDetails from "../assets/details/BottomDownloadDetails.svg";
 import RotomPlay from "../assets/RotomPlay.svg";
 import ApplinStore from "../assets/ApplinStore.svg";
 
+import Divider05 from "../assets/dividers/Divider05.svg";
+
 const AppScreen = () => {
 	return (
 		<section className="flex -mt-[180px]">
-			<div className="">
+			<div className="mx-auto">
 				<div className="flex items-center justify-center max-w-[90vw] mx-auto">
 					<div className="max-w-[30wv] translate-y-32">
 						<img
@@ -78,11 +80,7 @@ const AppScreen = () => {
 					</div>
 				</div>
 
-				<img
-					src="src/assets/dividers/Divider05.svg"
-					className="relative z-50"
-					alt=""
-				/>
+				<img src={Divider05} className="relative z-50" alt="" />
 			</div>
 		</section>
 	);
