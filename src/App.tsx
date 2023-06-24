@@ -1,3 +1,4 @@
+import ChameTodosSection from "./components/ChameTodosSection";
 import Header from "./components/Header";
 import InfoSection from "./components/InfoSection";
 import SecondSection from "./components/SecondSection";
@@ -13,6 +14,8 @@ function App() {
 			<SecondSection />
 
 			<InfoSection />
+
+			<ChameTodosSection />
 		</>
 	);
 }

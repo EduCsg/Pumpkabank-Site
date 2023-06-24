@@ -153,3 +153,18 @@ body {
 ::-webkit-scrollbar-thumb:hover {
 	background: #e23063;
 }
+
+.swiper-slide {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.swiper-slide > img {
+	transition: all 0.45s ease-in-out;
+}
+
+.swiper-slide:not(.swiper-slide-active) > img {
+	transform: scale(0.8);
+	filter: opacity(0.5);
+}

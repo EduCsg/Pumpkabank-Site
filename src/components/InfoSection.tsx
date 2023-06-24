@@ -48,7 +48,7 @@ const InfoSection = () => {
 
 				<div className="w-[60vw] flex flex-wrap gap-16 justify-center">
 					{infos.map((info) => (
-						<div className="text-white w-[15vw]">
+						<div key={info.title} className="text-white w-[15vw]">
 							<h1 className="font-semibold text-2xl">{info.title}</h1>
 							<h1 className="font-semibold text-2xl">{info.subtitle}</h1>
 
