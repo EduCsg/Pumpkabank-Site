@@ -1,12 +1,11 @@
-import PhoneImage from "../assets/HandWithPhoneImage.png";
+import { HandPhoneImage, RotomPlay, ApplinStore } from "../assets/export";
 
-import TopDownloadDetails from "../assets/details/TopDownloadDetails.svg";
-import BottomDownloadDetails from "../assets/details/BottomDownloadDetails.svg";
+import {
+	TopDownloadDetails,
+	BottomDownloadDetails,
+} from "../assets/details/export";
 
-import RotomPlay from "../assets/RotomPlay.svg";
-import ApplinStore from "../assets/ApplinStore.svg";
-
-import Divider05 from "../assets/dividers/Divider05.svg";
+import { Divider05 } from "../assets/dividers/export";
 
 import DownloadBtn from "../components/DownloadBtn";
 
@@ -17,7 +16,7 @@ const AppScreen = () => {
 				<div className="flex items-center justify-center max-w-[90vw] mx-auto">
 					<div className="max-w-[30wv] translate-y-32">
 						<img
-							src={PhoneImage}
+							src={HandPhoneImage}
 							alt="Mão segurando celular com aplicativo do Pumpkabank aberto"
 						/>
 					</div>

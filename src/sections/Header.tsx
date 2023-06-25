@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { useEffect, useState, useRef } from "react";
-import logo from "../assets/logo.svg";
+import { Logo } from "../assets/export";
 
 const Header = () => {
 	const [height, setHeight] = useState(0);
@@ -31,7 +31,7 @@ const Header = () => {
 			>
 				<img
 					className="h-[90px] w-[90px]"
-					src={logo}
+					src={Logo}
 					alt="Logo do Pumpkabank"
 				/>
 

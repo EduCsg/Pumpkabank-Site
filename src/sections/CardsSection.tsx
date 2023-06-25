@@ -1,13 +1,8 @@
-import Divider03 from "../assets/dividers/Divider03.svg";
-import Divider04 from "../assets/dividers/Divider04.svg";
+import { Divider03, Divider04 } from "../assets/dividers/export";
 
-import ChameTodosImg from "../assets/ChameTodos.png";
+import { ChameTodos } from "../assets/export";
 
-import LeftCardDetails from "../assets/details/LeftCardDetails.svg";
-
-import Card1 from "../assets/cards/card1.png";
-import Card2 from "../assets/cards/card2.png";
-import Card3 from "../assets/cards/card3.png";
+import { Card1, Card2, Card3 } from "../assets/cards/export";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper";
@@ -16,7 +11,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 
-import RightCardDetails from "../assets/details/RightCardDetails.svg";
+import { LeftCardDetails, RightCardDetails } from "../assets/details/export";
 
 const ChameTodosSection = () => {
 	const cards = [
@@ -48,7 +43,7 @@ const ChameTodosSection = () => {
 				<div className="flex flex-col items-center max-w-[90vw] mx-auto mt-12">
 					<div className="flex flex-col items-center">
 						<img
-							src={ChameTodosImg}
+							src={ChameTodos}
 							className="w-[70%]"
 							alt="Imagem chame todos"
 						/>

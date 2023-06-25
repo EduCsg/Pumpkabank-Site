@@ -1,5 +1,4 @@
-import LeftDetails from "../assets/details/LeftInfoDetails.svg";
-import RightDetails from "../assets/details/RightInfoDetails.svg";
+import { LeftInfoDetails, RightInfoDetails } from "../assets/details/export";
 
 const InfoSection = () => {
 	const infos = [
@@ -38,7 +37,7 @@ const InfoSection = () => {
 	return (
 		<section className="flex flex-col">
 			<div className="flex flex-row items-center max-w-[80vw] mx-auto mt-12">
-				<img src={LeftDetails} className="w-[5vw]" alt="Detalhes" />
+				<img src={LeftInfoDetails} className="w-[5vw]" alt="Detalhes" />
 
 				<div className="w-[60vw] flex flex-wrap gap-16 justify-center">
 					{infos.map((info) => (
@@ -53,7 +52,7 @@ const InfoSection = () => {
 					))}
 				</div>
 
-				<img src={RightDetails} className="w-[5vw] z-50" alt="Detalhes" />
+				<img src={RightInfoDetails} className="w-[5vw] z-50" alt="Detalhes" />
 			</div>
 		</section>
 	);

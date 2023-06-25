@@ -1,10 +1,11 @@
-import Divider01 from "../assets/dividers/Divider01.svg";
-import Divider02 from "../assets/dividers/Divider02.svg";
+import { Divider01, Divider02 } from "../assets/dividers/export";
 
-import PhoneScreen from "../assets/PhoneScreen.png";
+import { PhoneScreen } from "../assets/export";
 
-import UpperPhoneDetails from "../assets/details/UpperPhoneDetails.svg";
-import BottomPhoneDetails from "../assets/details/BottomPhoneDetails.svg";
+import {
+	UpperPhoneDetails,
+	BottomPhoneDetails,
+} from "../assets/details/export";
 
 const SecondSection = () => {
 	return (

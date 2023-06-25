@@ -1,11 +1,13 @@
 import welcomeImage from "../assets/Welcome.png";
 
-import ColorIcon1 from "../assets/colorsIcons/Color1.svg";
-import ColorIcon2 from "../assets/colorsIcons/Color2.svg";
-import ColorIcon3 from "../assets/colorsIcons/Color3.svg";
-import ColorIcon4 from "../assets/colorsIcons/Color4.svg";
-import ColorIcon5 from "../assets/colorsIcons/Color5.svg";
-import ColorIcon6 from "../assets/colorsIcons/Color6.svg";
+import {
+	ColorIcon1,
+	ColorIcon2,
+	ColorIcon3,
+	ColorIcon4,
+	ColorIcon5,
+	ColorIcon6,
+} from "../assets/colorsIcons/export";
 
 const WelcomeSection = () => {
 	const ColorsIcons = [

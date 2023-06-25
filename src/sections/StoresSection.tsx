@@ -1,24 +1,16 @@
 import { useState } from "react";
 
 // Details
-import TopStoresDetails from "../assets/details/TopStoresDetails.svg";
-import BottomLeftStores from "../assets/details/BottomLeftStores.svg";
-import BottomRightStores from "../assets/details/BottomRightStores.svg";
+import {
+	TopStoresDetails,
+	BottomLeftStores,
+	BottomRightStores,
+} from "../assets/details/export";
 
-// icons
-import DelibirdIcon from "../assets/stores/DelibirdIcon.png";
-import TaxiIcon from "../assets/stores/TaxiIcon.png";
-import GalarIcon from "../assets/stores/GalarIcon.png";
-import DensokuIcon from "../assets/stores/DensokuIcon.png";
-
-// store images
-import DelibirdStore from "../assets/stores/DelibirdStore.png";
-import TaxiStore from "../assets/stores/TaxiStore.png";
-import GalarStore from "../assets/stores/GalarStore.png";
-import DensokuStore from "../assets/stores/DensokuStore.png";
+import * as storesAssets from "../assets/stores/export";
 
 // section divider
-import Divider06 from "../assets/dividers/Divider06.svg";
+import { Divider06 } from "../assets/dividers/export";
 
 const StoresSection = () => {
 	const [activeIndex, setActiveIndex] = useState(3);
@@ -26,30 +18,30 @@ const StoresSection = () => {
 	const storesContent = [
 		{
 			title: "Delibird Shop",
-			icon: DelibirdIcon,
-			image: DelibirdStore,
+			icon: storesAssets.DelibirdIcon,
+			image: storesAssets.DelibirdStore,
 			iconAlt: "Ícone loja Delibird",
 			index: 0,
 		},
 		{
 			title: "Taxi Voador",
-			icon: TaxiIcon,
-			image: TaxiStore,
+			icon: storesAssets.TaxiIcon,
+			image: storesAssets.TaxiStore,
 			iconAlt: "Ícone loja Taxi",
 			index: 1,
 		},
 		{
 			title: "Parque Temático",
 			subtitle: "Galar Fire Station",
-			icon: GalarIcon,
-			image: GalarStore,
+			icon: storesAssets.GalarIcon,
+			image: storesAssets.GalarStore,
 			iconAlt: "Ícone loja Galar",
 			index: 2,
 		},
 		{
 			title: "Roupas Densoku",
-			icon: DensokuIcon,
-			image: DensokuStore,
+			icon: storesAssets.DensokuIcon,
+			image: storesAssets.DensokuStore,
 			iconAlt: "Ícone loja Densoku",
 			index: 3,
 		},
