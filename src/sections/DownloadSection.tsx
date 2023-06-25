@@ -8,6 +8,8 @@ import ApplinStore from "../assets/ApplinStore.svg";
 
 import Divider05 from "../assets/dividers/Divider05.svg";
 
+import DownloadBtn from "../components/DownloadBtn";
+
 const AppScreen = () => {
 	return (
 		<section className="flex -mt-[180px]">
@@ -34,37 +36,9 @@ const AppScreen = () => {
 							<h2 className="text-3xl">e abra sua conta em poucos minutos!</h2>
 
 							<div className="flex justify-center gap-8 my-4 ">
-								<a
-									className="flex items-center text-left gap-3 bg-pink p-2 px-4 shadow-[#e23063] shadow-[0px_0px_12px_0px] rounded-md hover:cursor-pointer"
-									href="#"
-								>
-									<img
-										src={RotomPlay}
-										className="h-[50px]"
-										alt="Logo do RotomPlay"
-									/>
+								<DownloadBtn img={RotomPlay} title="Rotom Play" />
 
-									<div className="flex flex-col">
-										<p className="text-xs">Disponível no</p>
-										<p className="text-xl font-medium">Rotom Play</p>
-									</div>
-								</a>
-
-								<a
-									className="flex items-center text-left gap-3 bg-pink p-2 px-4 shadow-[#e23063] shadow-[0px_0px_12px_0px] rounded-md hover:cursor-pointer"
-									href="#"
-								>
-									<img
-										src={ApplinStore}
-										className="h-[50px]"
-										alt="Logo do ApplinStore"
-									/>
-
-									<div className="flex flex-col">
-										<p className="text-xs">Disponível no</p>
-										<p className="text-xl font-medium">Rotom Play</p>
-									</div>
-								</a>
+								<DownloadBtn img={ApplinStore} title="Applin Store" />
 							</div>
 
 							<p className="text-base font-light">

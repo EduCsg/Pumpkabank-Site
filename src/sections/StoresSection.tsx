@@ -59,7 +59,11 @@ const StoresSection = () => {
 		<section className="flex flex-col items-center">
 			<div className="bg-lpurple w-full pb-10">
 				<div className="flex flex-col mx-auto gap-4 max-w-[90vw]">
-					<img src={TopStoresDetails} alt="Detalhes" className="" />
+					<img
+						src={TopStoresDetails}
+						alt="Detalhes"
+						className=" mx-auto mt-10 -mb-10"
+					/>
 
 					<div className="flex items-center justify-center">
 						{/* Conteúdo da esquerda */}

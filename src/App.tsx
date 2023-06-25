@@ -1,12 +1,12 @@
-import Header from "./components/Header";
+import Header from "./sections/Header";
 
-import WelcomeSection from "./components/WelcomeSection";
-import SecondSection from "./components/SecondSection";
-import InfoSection from "./components/InfoSection";
-import ChameTodosSection from "./components/ChameTodosSection";
-import AppScreen from "./components/DownloadSection";
-import StoresSection from "./components/StoresSection";
-import VenhaTambemSection from "./components/VenhaTambemSection";
+import WelcomeSection from "./sections/WelcomeSection";
+import SecondSection from "./sections/SecondSection";
+import InfoSection from "./sections/InfoSection";
+import CardsSection from "./sections/CardsSection";
+import AppScreen from "./sections/DownloadSection";
+import StoresSection from "./sections/StoresSection";
+import VenhaTambemSection from "./sections/VenhaTambemSection";
 
 // Footer
 
@@ -21,7 +21,7 @@ function App() {
 
 			<InfoSection />
 
-			<ChameTodosSection />
+			<CardsSection />
 
 			<AppScreen />
 

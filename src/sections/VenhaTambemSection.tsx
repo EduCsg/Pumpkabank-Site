@@ -2,7 +2,7 @@ import venhaTambemSvg from "../assets/venhaTambem.png";
 
 const VenhaTambemSection = () => {
 	return (
-		<section className="max-w-[90vw] mx-auto">
+		<section className="max-w-[90vw] mx-auto mb-24">
 			<div className="flex items-center justify-center">
 				<img
 					src={venhaTambemSvg}
