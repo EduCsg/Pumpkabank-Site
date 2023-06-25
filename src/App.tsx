@@ -7,6 +7,7 @@ import CardsSection from "./sections/CardsSection";
 import AppScreen from "./sections/DownloadSection";
 import StoresSection from "./sections/StoresSection";
 import VenhaTambemSection from "./sections/VenhaTambemSection";
+import Footer from "./sections/Footer";
 
 // Footer
 
@@ -28,6 +29,8 @@ function App() {
 			<StoresSection />
 
 			<VenhaTambemSection />
+
+			<Footer />
 		</>
 	);
 }

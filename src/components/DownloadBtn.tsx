@@ -1,5 +1,5 @@
 type Props = {
-	img: string;
+	img: string | undefined;
 	title: string;
 };
 
