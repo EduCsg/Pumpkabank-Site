@@ -110,8 +110,11 @@ const Footer = () => {
 
 			<div className="flex flex-row max-w-[70vw] py-8 mx-auto items-center justify-between text-white">
 				<div className="flex flex-col gap-2 w-[30vw]">
-					<p>Copyright @2022 Pumpkabank - Todos os Direitos Reservados</p>
-					<p>Monsters Inc. Pokémon Company e Game Freak</p>
+					<p>
+						Copyright &copy; {new Date().getFullYear()} Pumpkabank - Todos os
+						Direitos Reservados
+					</p>
+					<p>Monsters Inc. Pokémon Company & Game Freak.</p>
 				</div>
 
 				<div className="flex w-[10vw] items-center justify-center">
@@ -120,7 +123,7 @@ const Footer = () => {
 
 				<div className="w-[30vw] flex flex-col gap-2 items-end">
 					<p className="flex items-center">
-						Designed By
+						Designed by:
 						<a
 							href="https://www.linkedin.com/in/giovannymarin/"
 							target="_blank"
@@ -130,7 +133,7 @@ const Footer = () => {
 						</a>
 					</p>
 					<p className="flex">
-						Developed by
+						Developed by:
 						<a
 							href="https://www.linkedin.com/in/educasagrande"
 							target="_blank"
