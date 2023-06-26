@@ -40,10 +40,13 @@ const Footer = () => {
 
 	return (
 		<footer className="bg-lpurple">
-			<div className="flex flex-row max-w-[70vw] py-20 mx-auto justify-between">
+			<div className="flex flex-col md:flex-row flex-wrap justify-between md:justify-center xlg:justify-between max-w-[80vw] xlg:max-w-[70vw] pt-20 mx-auto">
 				{footerLinks &&
 					footerLinks.map((footerLink, index) => (
-						<div key={index} className="flex flex-col gap-4">
+						<div
+							key={index}
+							className="flex flex-col gap-4 px-4 w-auto sm:w-[60vw] md:w-[40vw] xlg:w-[25vw] xxl:w-auto mb-20"
+						>
 							{/* */}
 							{/* Loop de títulos */}
 							<h1 className="text-white font-semibold text-xl">
@@ -77,7 +80,7 @@ const Footer = () => {
 											<a
 												key={index}
 												href="#"
-												className="text-white font-normal text-base hover:text-green "
+												className="text-white font-normal text-base hover:text-green break-words"
 											>
 												{link}
 											</a>
@@ -89,7 +92,6 @@ const Footer = () => {
 									<div className="flex flex-row gap-4">
 										{footerLink.links &&
 											footerLink.links.map((link, index) => (
-												// #26e55f  =>  invert(84%) sepia(20%) saturate(1775%) hue-rotate(72deg) brightness(92%) contrast(94%);
 												<div className="flex flex-row justify-center items-center gap-4 hover:cursor-pointer hover:scale-105 transition-all">
 													<img
 														key={link}
@@ -108,8 +110,8 @@ const Footer = () => {
 			{/* Divisor do footer */}
 			<div className="h-[2px] w-full bg-[#5C31BB] "></div>
 
-			<div className="flex flex-row max-w-[70vw] py-8 mx-auto items-center justify-between text-white">
-				<div className="flex flex-col gap-2 w-[30vw]">
+			<div className="flex flex-col xl:flex-row max-w-[70vw] py-8 mx-auto gap-10 items-center justify-between text-white">
+				<div className="flex flex-col gap-2 text-center xl:items-start w-[90vw] xl:w-[30vw]">
 					<p>
 						Copyright &copy; {new Date().getFullYear()} Pumpkabank - Todos os
 						Direitos Reservados
@@ -117,11 +119,11 @@ const Footer = () => {
 					<p>Monsters Inc. Pokémon Company & Game Freak.</p>
 				</div>
 
-				<div className="flex w-[10vw] items-center justify-center">
+				<div className="flex xl:w-[10vw] items-center justify-center">
 					<img src={Logo} alt="Logo do Pumpkabank" />
 				</div>
 
-				<div className="w-[30vw] flex flex-col gap-2 items-end">
+				<div className="flex flex-col gap-2 items-center text-center w-[100vw] xl:items-end xl:w-[30vw]">
 					<p className="flex items-center">
 						Designed by:
 						<a
