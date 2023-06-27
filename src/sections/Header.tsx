@@ -1,76 +1,98 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { useEffect, useState, useRef } from "react";
-import { Logo } from "../assets/export";
+import { useEffect } from "react";
+import { Logo, HamburguerMenu, CloseMenu } from "../assets/export";
+import React from "react";
 
 const Header = () => {
-	const [height, setHeight] = useState(0);
-	const headerRef: any = useRef(null);
-	const removeHeaderRef: any = useRef(null);
+	const [MoreThan766, setMoreThan766] = React.useState(false);
+	const [isOpen, setIsOpen] = React.useState(false);
+	const headerRef = React.useRef<any>(null);
 
-	const removeHeaderHeight = () => {
-		setHeight(headerRef.current?.clientHeight);
-
-		if (removeHeaderRef) {
-			removeHeaderRef.current.style.height = `${height}px`;
-		}
-	};
-
+	// Roda sempre que a página é redimensionada para verificar se é maior que 766px
 	window.addEventListener("resize", () => {
-		removeHeaderHeight();
+		window.innerWidth > 766 ? setMoreThan766(true) : setMoreThan766(false);
 	});
 
+	// Roda uma vez só quando abre a página
 	useEffect(() => {
-		removeHeaderHeight();
-	});
+		window.innerWidth > 766 ? setMoreThan766(true) : setMoreThan766(false);
+	}, []);
 
 	return (
 		<>
 			<header
 				ref={headerRef}
-				className="flex fixed w-[80vw] left-1/2 -translate-x-1/2 justify-between items-center z-50"
+				className={`flex flex-row mx-auto lg:fixed w-[90vw] xxl:w-[80vw] lg:left-1/2 lg:-translate-x-1/2 justify-center lg:justify-between items-center z-50 transition-all duration-700 ease-in-out
+				${!MoreThan766 ? (isOpen ? "max-h-[352px]" : "max-h-[0px]") : "max-h-auto"} `}
 			>
 				<img
-					className="h-[90px] w-[90px]"
+					className="hidden lg:block h-[90px] w-[90px]"
 					src={Logo}
 					alt="Logo do Pumpkabank"
 				/>
 
-				<nav className="bg-white rounded-b-[50px] h-24 flex px-16 gap-24 items-center font-semibold text-purple">
-					<ul className="flex gap-4">
-						<li className="p-4 rounded-xl hover:bg-pink hover:cursor-pointer hover:text-white transition-all duration-200 ease-out">
+				<nav
+					className={`flex flex-col md:flex-row bg-white md:translate-y-0 transition-all duration-700 ease-in-out
+					text-purple rounded-b-[50px] font-semibold w-full px-6 lg:px-16 md:gap-24 gap-4 items-center py-6 md:py-0 md:w-auto md:h-24
+					${isOpen ? "translate-y-[0]" : "-translate-y-[80vh]"}`}
+				>
+					<ul className="flex gap-4 justify flex-col md:flex-row items-center text-center whitespace-nowrap">
+						<li className="p-2 md:p-4 rounded-xl hover:bg-pink hover:cursor-pointer hover:text-white transition-all duration-200 ease-out">
 							<a href="#">Lojas</a>
 						</li>
-						<li className="p-4 rounded-xl hover:bg-pink hover:cursor-pointer hover:text-white transition-all duration-200 ease-out">
+						<li className="p-2 md:p-4 rounded-xl hover:bg-pink hover:cursor-pointer hover:text-white transition-all duration-200 ease-out">
 							<a href="#">Parceiros</a>
 						</li>
-						<li className="p-4 rounded-xl hover:bg-pink hover:cursor-pointer hover:text-white transition-all duration-200 ease-out">
+						<li className="p-2 md:p-4 rounded-xl hover:bg-pink hover:cursor-pointer hover:text-white transition-all duration-200 ease-out">
 							<a href="#">Saiba mais</a>
 						</li>
 					</ul>
 
-					<ul className="group flex gap-4">
-						<li>
+					<ul className="group flex flex-col md:flex-row gap-4 items-center text-center">
+						<li className="p-2 md:p-4">
 							<a
 								href="#"
-								className="p-4 rounded-xl hover:bg-pink hover:cursor-pointer hover:text-white transition-all duration-200 ease-out"
+								className="p-2 md:p-4 rounded-xl hover:bg-pink hover:cursor-pointer whitespace-nowrap hover:text-white transition-all duration-200 ease-out"
 							>
 								Criar conta
 							</a>
 						</li>
 
-						<li>
+						<li className="p-2 md:p-4">
 							<a
 								href="#"
-								className="p-4 rounded-xl bg-pink text-white hover:cursor-pointer group-hover:text-purple group-hover:bg-white ring-pink hover:!text-pink hover:ring-2 ring-inset transition-all duration-200 ease-out"
+								className=" rounded-xl p-4 bg-pink text-white hover:cursor-pointer group-hover:text-purple group-hover:bg-white ring-pink hover:!text-pink hover:ring-2 ring-inset transition-all duration-200 ease-out"
 							>
 								Login
 							</a>
 						</li>
 					</ul>
 				</nav>
+
+				<img
+					src={HamburguerMenu}
+					onClick={() => setIsOpen(!isOpen)}
+					className={`md:hidden absolute top-4 right-10 w-[45px] transition-all duration-700 ease-in-out ${
+						isOpen ? "-translate-y-20" : "translate-y-0"
+					} hover:cursor-pointer`}
+					alt="Ícone para abrir o menu hamburger"
+				/>
+				<img
+					src={CloseMenu}
+					onClick={() => setIsOpen(!isOpen)}
+					className={`md:hidden absolute top-4  right-10 w-[45px] transition-all duration-700 ease-in-out ${
+						isOpen ? "translate-y-0" : "-translate-y-20"
+					} hover:cursor-pointer`}
+					alt="Ícone para fechar o menu hamburger"
+				/>
 			</header>
 
-			<div ref={removeHeaderRef} id="removeHeader"></div>
+			<div
+				id="removeHeader"
+				className={`hidden lg:block ${
+					window.innerWidth > 766 ? `h-[96px]` : "h-0"
+				}`}
+			></div>
 		</>
 	);
 };

@@ -12,6 +12,10 @@ import venhaTambem from "./venhaTambem.png";
 import ApplinStore from "./ApplinStore.svg";
 import RotomPlay from "./RotomPlay.svg";
 
+// Hamburguer Menu
+import HamburguerMenu from "./HamburguerMenu.svg";
+import CloseMenu from "./CloseMenu.svg";
+
 export {
 	ApplinStore,
 	RotomPlay,
@@ -21,4 +25,6 @@ export {
 	ChameTodos,
 	HandPhoneImage,
 	venhaTambem,
+	HamburguerMenu,
+	CloseMenu,
 };
