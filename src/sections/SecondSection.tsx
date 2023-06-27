@@ -12,9 +12,9 @@ const SecondSection = () => {
 		<>
 			<img src={Divider01} alt="Divisão da seção" />
 
-			<section className="flex flex-col bg-lpurple">
-				<div className="flex items-center font-semibold max-w-[80vw] mx-auto mt-12">
-					<div className="w-[30vw]">
+			<section className="flex flex-col pb-10 bg-lpurple">
+				<div className="flex flex-col md:flex-row items-center font-semibold max-w-screen lg:max-w-[80vw] mx-auto mt-12">
+					<div className="flex justify-center md:justify-between mb-10 md:mb-0 max-w-[90vw] md:max-w-[40vw]">
 						<img
 							src={PhoneScreen}
 							className="w-[80%]"
@@ -22,15 +22,15 @@ const SecondSection = () => {
 						/>
 					</div>
 
-					<div className="flex flex-col text-white items-center gap-10 w-[40vw]">
+					<div className="flex flex-col text-white items-center gap-10 max-w-[80vw] md:w-[40vw]">
 						<img
 							src={UpperPhoneDetails}
-							className="-translate-x-48"
+							className="hidden lg:block -translate-x-48"
 							alt="Detalhes"
 						/>
 
-						<div className="flex flex-col gap-12">
-							<h1 className="text-[60px] max-w-[5w]">
+						<div className="flex flex-col max-w-[80vw] mb-10 md:mb-0 md:max-w-full gap-12">
+							<h1 className="text-[25px] md:text-[30px] text-center md:text-left xlg:text-[40px] text-white md:whitespace-nowrap">
 								Transferências <span className="text-green">GRÁTIS</span>
 								<br />
 								sempre que precisar!
@@ -49,21 +49,21 @@ const SecondSection = () => {
 								</p>
 							</div>
 
-							<h1 className="text-green text-5xl text-center">
+							<h1 className="text-green text-[35px] text-center xlg:text-[40px] md:whitespace-nowrap">
 								PRÁTICO <span className="text-white">&</span> <br /> ACESSÍVEL
 							</h1>
 						</div>
 
 						<img
 							src={BottomPhoneDetails}
-							className="translate-x-20"
+							className="hidden lg:block translate-x-20"
 							alt="Detalhes"
 						/>
 					</div>
 				</div>
 			</section>
 
-			<img src={Divider02} alt="Divisão da seção" />
+			<img src={Divider02} className="w-screen" alt="Divisão da seção" />
 		</>
 	);
 };
