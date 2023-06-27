@@ -21,19 +21,19 @@ const WelcomeSection = () => {
 
 	return (
 		<section className="flex flex-col">
-			<div className="flex items-center font-semibold max-w-[80vw] mx-auto mt-12">
-				<div className="flex flex-col gap-5 w-[50vw]">
-					<h1 className="text-[60px] max-w-[5w] text-white">
+			<div className="flex flex-col-reverse md:flex-row items-center justify-center text-left font-semibold max-w-[90vw] mx-auto mb-10 md:mb-0 mt-12">
+				<div className="flex flex-col gap-5 md:max-w-[50vw] max-w-[70vw]">
+					<h1 className="text-[30px] sm:text-[25px] md:text-[30px] xlg:text-[40px] xxl:text-[60px] text-white">
 						O 1º banco que conecta
 						<br />
 						todas as regiões em UMA
 					</h1>
 
-					<p className="text-[30px] text-green">
+					<p className="text-[20px] xxl:text-[30px] text-green">
 						De Kanto a Paldea, seu dinheiro onde você quiser!
 					</p>
 
-					<div className="flex gap-3">
+					<div className="flex justify-center sm:justify-start gap-3">
 						{ColorsIcons &&
 							ColorsIcons.map((color, index) => (
 								<img
@@ -41,22 +41,22 @@ const WelcomeSection = () => {
 									key={index}
 									className={
 										index == 0
-											? ` ring-offset-purple ring-offset-4 ring-pink ring-2 rounded-full`
-											: ``
+											? "max-w-[35px] sm:max-w-[50px] md:max-w-max ring-offset-purple ring-offset-4 ring-pink ring-2 rounded-full"
+											: "max-w-[35px] sm:max-w-[50px] md:max-w-max"
 									}
 								/>
 							))}
 					</div>
 
-					<div>
+					<div className="flex justify-center sm:justify-start">
 						<button className="bg-pink px-12 py-5 text-white rounded-lg">
 							Criar Conta
 						</button>
 					</div>
 				</div>
 
-				<div className="w-[30vw]">
-					<img src={welcomeImage} className="" alt="" />
+				<div className="max-w-[80vw] sm:max-w-[50vw] md:max-w-[30vw]">
+					<img src={welcomeImage} className="p-8" alt="" />
 				</div>
 			</div>
 		</section>

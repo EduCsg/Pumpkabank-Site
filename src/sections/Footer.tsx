@@ -62,10 +62,9 @@ const Footer = () => {
 										//
 										// Se for o de baixar apps, mostra em coluna
 										footerLink.title.includes("Baixe") ? (
-											<div className="gap-4">
+											<div className="gap-4" key={link}>
 												<div className="text-white">
 													<DownloadBtn
-														key={link}
 														img={footerLink.images?.[index]}
 														title={link}
 													/>
@@ -92,12 +91,11 @@ const Footer = () => {
 									<div className="flex flex-row gap-4">
 										{footerLink.links &&
 											footerLink.links.map((link, index) => (
-												<div className="flex flex-row justify-center items-center gap-4 hover:cursor-pointer hover:scale-105 transition-all">
-													<img
-														key={link}
-														src={footerLink.images?.[index]}
-														title={link}
-													/>
+												<div
+													className="flex flex-row justify-center items-center gap-4 hover:cursor-pointer hover:scale-105 transition-all"
+													key={link}
+												>
+													<img src={footerLink.images?.[index]} title={link} />
 												</div>
 											))}
 									</div>
@@ -117,6 +115,16 @@ const Footer = () => {
 						Direitos Reservados
 					</p>
 					<p>Monsters Inc. Pokémon Company & Game Freak.</p>
+					<p>
+						Encontrou um Bug?{" "}
+						<a
+							href="https://github.com/EduCsg/Pumpkabank-Site/issues"
+							className="text-green font-semibold hover:underline"
+							target="_blank"
+						>
+							Reporte-nos!
+						</a>
+					</p>
 				</div>
 
 				<div className="flex xl:w-[10vw] items-center justify-center">
