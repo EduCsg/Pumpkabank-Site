@@ -131,7 +131,7 @@ const Footer = () => {
 					<img src={Logo} alt="Logo do Pumpkabank" />
 				</div>
 
-				<div className="flex flex-col gap-2 items-center text-center w-[100vw] xl:items-end xl:w-[30vw]">
+				<div className="flex flex-col gap-2 items-center text-center  xl:items-end xl:w-[30vw]">
 					<p className="flex items-center">
 						Designed by:
 						<a
