@@ -100,7 +100,7 @@ const Header = () => {
 			<div
 				id="removeHeader"
 				className={`hidden md:block ${
-					window.innerWidth > 766 ? `h-[${headerHeight}px]` : "h-0"
+					MoreThan766 ? `h-[${headerHeight}px]` : "h-0"
 				}`}
 			></div>
 		</>

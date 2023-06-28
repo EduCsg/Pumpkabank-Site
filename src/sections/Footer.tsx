@@ -115,6 +115,34 @@ const Footer = () => {
 						Direitos Reservados
 					</p>
 					<p>Monsters Inc. Pokémon Company & Game Freak.</p>
+				</div>
+
+				<div className="flex xl:w-[10vw] items-center justify-center">
+					<img src={Logo} alt="Logo do Pumpkabank" />
+				</div>
+
+				<div className="flex flex-col gap-3 sm:gap-2 items-center text-center xl:items-end xl:w-[30vw]">
+					<p className="flex flex-col sm:flex-row gap-1 items-center">
+						Designed by:
+						<a
+							href="https://www.linkedin.com/in/giovannymarin/"
+							target="_blank"
+							className="text-green font-semibold hover:underline"
+						>
+							Giovanny Marin de Almeida
+						</a>
+					</p>
+
+					<p className="flex flex-col sm:flex-row gap-1">
+						Developed by:
+						<a
+							href="https://www.linkedin.com/in/educasagrande"
+							target="_blank"
+							className="text-green font-semibold hover:underline"
+						>
+							Eduardo Casagrande
+						</a>
+					</p>
 					<p>
 						Encontrou um Bug?{" "}
 						<a
@@ -123,33 +151,6 @@ const Footer = () => {
 							target="_blank"
 						>
 							Reporte-nos!
-						</a>
-					</p>
-				</div>
-
-				<div className="flex xl:w-[10vw] items-center justify-center">
-					<img src={Logo} alt="Logo do Pumpkabank" />
-				</div>
-
-				<div className="flex flex-col gap-2 items-center text-center  xl:items-end xl:w-[30vw]">
-					<p className="flex items-center">
-						Designed by:
-						<a
-							href="https://www.linkedin.com/in/giovannymarin/"
-							target="_blank"
-							className="text-green ml-1 font-semibold hover:underline"
-						>
-							Giovanny Marin de Almeida
-						</a>
-					</p>
-					<p className="flex">
-						Developed by:
-						<a
-							href="https://www.linkedin.com/in/educasagrande"
-							target="_blank"
-							className="text-green ml-1 font-semibold hover:underline"
-						>
-							Eduardo Casagrande
 						</a>
 					</p>
 				</div>
