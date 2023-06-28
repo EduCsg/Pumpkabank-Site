@@ -40,7 +40,7 @@ const Footer = () => {
 
 	return (
 		<footer className="bg-lpurple">
-			<div className="flex flex-col md:flex-row flex-wrap justify-between md:justify-center xlg:justify-between max-w-[80vw] xlg:max-w-[70vw] pt-20 mx-auto">
+			<div className="flex flex-col md:flex-row flex-wrap justify-between md:justify-center xlg:justify-between max-w-[90vw] xlg:max-w-[70vw] pt-20 mx-auto">
 				{footerLinks &&
 					footerLinks.map((footerLink, index) => (
 						<div

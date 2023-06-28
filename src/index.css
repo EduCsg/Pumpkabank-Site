@@ -168,3 +168,7 @@ body {
 	transform: scale(0.8);
 	filter: opacity(0.5);
 }
+
+.h-96 {
+	height: 96px;
+}
