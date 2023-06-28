@@ -37,31 +37,32 @@ const ChameTodosSection = () => {
 
 	return (
 		<>
-			<img src={Divider03} alt="Divisão da seção" />
+			<img src={Divider03} className="w-screen" alt="Divisão da seção" />
 
 			<section className="flex flex-col bg-lpurple">
 				<div className="flex flex-col items-center max-w-[90vw] mx-auto mt-12">
 					<div className="flex flex-col items-center">
 						<img
 							src={ChameTodos}
-							className="w-[70%]"
+							className="md:w-[80%] xlg:w-[70%]"
 							alt="Imagem chame todos"
 						/>
 
-						<p className="text-white font-light text-3xl mt-5">
+						<p className="text-white font-light text-xl text-center md:text-3xl mt-5">
 							Conquiste prêmios, <span className="text-green">Pokémons</span> e
 							cartões personalizados!
 						</p>
 					</div>
 
-					<div className="flex justify-center items-center max-w-[90vw] mt-20 w-full">
+					<div className="flex justify-center xl:justify-between items-center max-w-[90vw] mt-10 xlg:mt-20 w-full">
+						{/* Detalhes esquerda */}
 						<img
 							src={LeftCardDetails}
 							alt="Detalhes"
-							className="w-[22vw] h-[50vh] translate-x-20 translate-y-20"
+							className="w-[22vw] h-[50vh] translate-x-20 hidden xl:block translate-y-20"
 						/>
 
-						<div className="w-[35vw]">
+						<div className="w-[80vw] sm:w-[60vw] mb-10 xl:mb-0 xl:w-[35vw]">
 							<Swiper
 								slidesPerView={3}
 								loop={true}
@@ -86,19 +87,21 @@ const ChameTodosSection = () => {
 							</Swiper>
 						</div>
 
+						{/* Detalhes direita */}
 						<img
 							src={RightCardDetails}
 							alt="Detalhes"
-							className="w-[22vw] h-[30vh] -translate-x-0 -translate-y-24"
+							className="w-[22vw] h-[30vh] -translate-x-0  hidden xl:block -translate-y-24"
 						/>
 					</div>
 
-					<div className="mb-20 mt-10 text-white font-semibold hover:cursor-pointer">
+					{/* Botão eu quero! */}
+					<div className="mb-20 whitespace-nowrap mt-10 text-white font-semibold hover:cursor-pointer">
 						<a
 							href="#"
-							className="px-14 py-5 shadow-[#e23063] shadow-[0px_0px_12px_0px] bg-pink rounded-lg"
+							className="px-10 py-5 shadow-[#e23063] shadow-[0px_0px_12px_0px] uppercase bg-pink rounded-lg"
 						>
-							EU QUERO!
+							eu quero!
 						</a>
 					</div>
 				</div>
