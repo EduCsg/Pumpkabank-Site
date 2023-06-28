@@ -7,6 +7,7 @@ const Header = () => {
 	const [MoreThan766, setMoreThan766] = React.useState(false);
 	const [isOpen, setIsOpen] = React.useState(false);
 	const headerRef = React.useRef<any>(null);
+	const [headerHeight, setHeaderHeight] = React.useState(0);
 
 	// Roda sempre que a página é redimensionada para verificar se é maior que 766px
 	window.addEventListener("resize", () => {
@@ -18,11 +19,20 @@ const Header = () => {
 		window.innerWidth > 766 ? setMoreThan766(true) : setMoreThan766(false);
 	}, []);
 
+	// Roda para o headerHeight nunca ser igual a null
+	useEffect(() => {
+		if (!headerRef?.current?.clientHeight) {
+			return;
+		}
+
+		setHeaderHeight(headerRef?.current?.clientHeight);
+	}, [headerRef?.current?.clientHeight]);
+
 	return (
 		<>
 			<header
 				ref={headerRef}
-				className={`flex flex-row mx-auto lg:fixed w-[90vw] xxl:w-[80vw] lg:left-1/2 lg:-translate-x-1/2 justify-center lg:justify-between items-center z-50 transition-all duration-700 ease-in-out
+				className={`flex flex-row mx-auto md:fixed w-[90vw] xxl:w-[80vw] md:left-1/2 md:-translate-x-1/2 justify-center lg:justify-between items-center z-50 transition-all duration-700 ease-in-out
 				${!MoreThan766 ? (isOpen ? "max-h-[352px]" : "max-h-[0px]") : "max-h-auto"} `}
 			>
 				<img
@@ -89,8 +99,8 @@ const Header = () => {
 
 			<div
 				id="removeHeader"
-				className={`hidden lg:block ${
-					window.innerWidth > 766 ? `h-[96px]` : "h-0"
+				className={`hidden md:block ${
+					window.innerWidth > 766 ? `h-[${headerHeight}px]` : "h-0"
 				}`}
 			></div>
 		</>
