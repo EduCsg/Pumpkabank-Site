@@ -125,7 +125,7 @@ const Footer = () => {
 					<p className="flex flex-col sm:flex-row gap-1 items-center">
 						Designed by:
 						<a
-							href="https://www.linkedin.com/in/giovannymarin/"
+							href="https://www.linkedin.com/in/giovanny-marin-41a7ba222/"
 							target="_blank"
 							className="text-green font-semibold hover:underline"
 						>
